@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <vector>
+
 using namespace std;
 float med(float vet[], float tam){
  int soma = 0;
