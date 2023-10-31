@@ -1,22 +1,29 @@
 #include <iostream>
-#include <vector>
-
+//#include <vector>
 using namespace std;
-
-double calcularMedia(const vector<int>& vetor) {
-    int soma = 0;
-    for (int valor : vetor) {
-        soma += valor;
-    }
-    double media = static_cast<double>(soma) / vetor.size();
-    return media;
+float med(float vet[], float tam){
+ int soma = 0;
+  for(int i = 0; i < tam; i++){
+    
+    soma = soma + vet[i];
+    
+  }
+  float media = soma / tam;
+  return media;
 }
 
-int main() {
-    // Exemplo de uso
-    vector<int> numeros = {5, 10, 15, 20, 25};
-    double media = calcularMedia(numeros);
-    cout << "A media dos valores no vetor eh: " << media << endl;
+int main()
+{
+  float v[]= {5,10,15,20};
+  float tam;
+tam = sizeof(v)/ sizeof(v[0]);
 
-    return 0;
+  cout<<"os elementos do vetor são: ";
+  for(int num : v)
+    {
+      cout<<num <<" ";
+    }
+ cout<<"\n";
+  cout<<"a média dos valores do vetor é: " <<med(v, tam) <<endl;
+return 0;
 }
