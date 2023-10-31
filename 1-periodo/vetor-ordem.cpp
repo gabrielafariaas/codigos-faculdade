@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
-void v(int a[], int b) {
-  int f;
+void crescente(int a[], int b) {
+  bool f = false;
   for (int i = 0; i < b - 1; i++) {
     if (a[i] < a[i + 1]) {
-      f = 1;
+      f = true;
     } else {
-      f = 0;
+      f = false;
       cout << "não está em ordem crescente ";
       break;
     }
   }
-  if (f == 1) {
+  if (f) {
     cout << "está em ordem crescente ";
   }
 }
 int main() {
-  int a[] = {1, 2, 6, 4, 5}, b;
-  b = sizeof(a) / sizeof(a[0]);
-  v(a, b);
+  int a[] = {1, 9, 3, 4, 5, 6, 7}, tam;
+  tam = sizeof(a) / sizeof(a[0]);
+  crescente(a, tam);
   cout << " \n";
   cout << "os elementos do vetor são: ";
-  for (int i = 0; i < b; i++) {
-    cout << a[i] << " ";
+  for (int i : a) {
+    cout << i << " ";
   }
 
   return 0;
